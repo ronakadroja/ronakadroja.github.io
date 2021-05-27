@@ -10,7 +10,7 @@
      $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Subject = " .$subject . "\r\n  Message =" . $message;
      $headers = "From: " . $from . " \r\n Reply to: " . $email;
      if($email!=NULL){
-         mail($to, $email_subject, $txt, $headers);
+         mail("ronakadroja1234@gmail.com", $email_subject, $txt, $headers);
          header("Location: thankyou.html");
         }
     }
