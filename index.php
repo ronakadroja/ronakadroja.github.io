@@ -163,7 +163,7 @@ if(!$conn) {
                     </div>
                 </div>
             </div>
-        </div>y
+        </div>
     </section>
 
     <!-- teams section start -->
