@@ -1,9 +1,3 @@
-<?php 
-$conn = mysqli_connect("localhost", "root", "", "ronak");
-if(!$conn) {
-    die("not connected");
-    }
-?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -245,13 +239,13 @@ if(!$conn) {
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form class="contact-form" action="contactus.php" method="post">
+                    <form class="contact-form" action="contactus.php">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" class="fullname" name="Name" placeholder="Name">
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" name="Sender" placeholder="Email">
+                                <input type="text" class="email-input" name="Email" placeholder="Email">
                             </div>
                         </div>
                         <div class="field">
@@ -261,7 +255,7 @@ if(!$conn) {
                             <textarea class="message" cols="30" rows="10" name="Message" placeholder="Message.."></textarea>
                         </div>
                         <div class="button-area">
-                            <button class="send-msg" type="submit" name="send">Send message</button>
+                            <button class="send-msg" name="send">Send message</button>
                         </div>
                     </form>
                 </div>
@@ -286,9 +280,8 @@ if(!$conn) {
             </ul>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
-
 
 </body>
 
