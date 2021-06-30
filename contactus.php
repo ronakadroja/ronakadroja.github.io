@@ -1,36 +1,23 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $Name=$_POST['Name'];
+    $Email=$_POST['Email'];
+    $Subject=$_POST['Subject'];
+    $Message=$_POST['Message'];
 
-$EmailFrom = "ronakadroja89@gmail.com";
-$EmailTo = "ronakadroja1234@gmail.com";
+    $to = "ronakadroja1234@gmail.com";
+    $mail_subject = "Message from Portfolio";
+    $email_message = "Hello, Ronak,\n Name : $Name \n Email : $Email \n Subject : $Subject \n Message : $Message" ;
+    $from = "From: ronakadroja89@gmail.com";
+    
 
-$subject = "New Message from Portfolio.";
-$Name = Trim(stripslashes($_POST['Name']));
-$Email = Trim(stripslashes($_POST['Sender']));
-$Subject = Trim(stripslashes($_POST['Subject']));
-$Message = Trim(stripslashes($_POST['Message']));
-
-$validationOK=true;
-if(!validationOK){
-    print "<meta http-equvia=\"refresh\" content=\"0,URL=error.htm\">";
-    exit;
-}
-
-$Body ="";
-$Body = "
-'
-Name : $Name
-Email : $Email
-Subject : $Subject
-Message : $Message
-'
-";
-
-$success = mail($EmailTo, $subject, $Body, "From : <$EmailFrom>", "Reply to : <$Email>");
-if($success){
-    print "<meta http-equvia=\"refresh\" content=\"0,URL=thankyou.html\">";
-}
-else{
-    print "<meta http-equvia=\"refresh\" content=\"0,URL=error.htm\">";
+    if (mail($to, $mail_subject, $email_message, $from)) {
+        echo "Mail send successfully";
+        // header("location: mail.php");
+    } else {
+        echo "not send";
+        // header("location: mail.php");
+    }
 }
 
 ?>

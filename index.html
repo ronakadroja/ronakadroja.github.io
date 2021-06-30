@@ -242,17 +242,17 @@
                     <form class="contact-form" action="contactus.php" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" class="fullname" id="Name" placeholder="Name">
+                                <input type="text" class="fullname" id="Name" name="Name" placeholder="Name">
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" id="Sender" placeholder="Email">
+                                <input type="text" class="email-input" id="Sender" name="Email" placeholder="Email">
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" id="Subject" placeholder="Subject">
+                            <input type="text" class="subject" id="Subject" name="Subject" placeholder="Subject">
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" id="Message" placeholder="Message.."></textarea>
+                            <textarea class="message" cols="30" rows="10" id="Message" name="Message" placeholder="Message.."></textarea>
                         </div>
                         <div class="button-area">
                             <button class="send-msg" type="submit" name="send" onclick="sendmail()">Send message</button>
