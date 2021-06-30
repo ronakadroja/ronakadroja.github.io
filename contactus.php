@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
 
     if (mail($to, $mail_subject, $email_message, $from)) {
-        header("location: thankyou.html");
+        echo "Mail Sent Successfully";
+        // header("location: thankyou.html");
     } else {
         echo "not send";
         // header("location: mail.php");
