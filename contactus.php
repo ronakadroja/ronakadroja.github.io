@@ -10,13 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email_message = "Hello, Ronak,\n Name : $Name \n Email : $Email \n Subject : $Subject \n Message : $Message" ;
     $from = "From: $Email";
     
-
     if (mail($to, $mail_subject, $email_message, $from)) {
-        echo "Mail Sent Successfully";
-        // header("location: thankyou.html");
-    } else {
+        header("location: thankyou.html");
+    }
+    else {
         echo "not send";
-        // header("location: mail.php");
     }
 }
 
